@@ -15,6 +15,7 @@ import sqlite3
 import pandas.io.sql as psql
 import glob
 import configparser
+import shutil
 from multiprocessing import Pool
 from multiprocessing import Process
 
@@ -23,6 +24,7 @@ from lib.BlockParser       import BlockParser
 cfg = configparser.ConfigParser()
 cfg.read("./config/development.conf")
 
+CHECK_PATH = "/Users/igakishuusei/Desktop/BitcoinBlockReader"
 MAX_PROCESS_NUMBER            = int(cfg["section1"]["MAX_PROCESS_NUMBER"])
 BLOCK_DIR_PATH                = cfg["section1"]["BLOCK_DIR_PATH"]
 
@@ -49,6 +51,11 @@ def main():
   fileNumber = len(blockFilePathes)
   while len(blockFilePathes) != 0:
     tmpBlockFilePathes = []
+    disk = shutil.disk_usage(CHECK_PATH)
+    lastDiskGb = disk[2]/1024/1024/1024
+    if lastDiskGb < 10:
+      print(lastDiskGb)
+      exit()
     for i in range(MAX_PROCESS_NUMBER):
       if len(blockFilePathes) != 0:
         tmpBlockFilePathes.append(blockFilePathes.pop(0))
