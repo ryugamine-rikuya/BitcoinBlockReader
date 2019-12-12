@@ -56,8 +56,8 @@ class SqlDataFrame():
     def addList(self, blockHeight,blockFileNumber,hashTransaction, address,inOutFlag,creationTimestamp):
         self.blockHeightList.append(blockHeight)
         self.blockFileNumberList.append(blockFileNumber)
-        self.hashTransactionList.append(hashTransaction)
-        self.addressList.append(address)
+        self.hashTransactionList.append(hashTransaction.decode('utf-8'))
+        self.addressList.append(address.decode('utf-8'))
         self.inOutFlagList.append(inOutFlag)
         self.creationTimestampList.append(creationTimestamp)
 
@@ -78,6 +78,10 @@ class SqlDataFrame():
 
     def writeToMysql(self):
         self.sqlDf.to_sql('BitcoinTransaction', self.mysqlUrl, if_exists='append', index=None)
+
+    def writeToPickle(self, fileName, saveDir="./pickle/sql/"):
+        self.makeDir(saveDir)
+        self.sqlDf.to_pickle(saveDir+fileName)
 
 
     def makeDir(self,path):

@@ -47,7 +47,7 @@ class InputDataFrame():
         self.seqNoList.append(seqNo)
         self.signatureList.append(signature)
         self.publicKeyList.append(publicKey)
-        self.addressList.append(address)
+        self.addressList.append(address.decode('utf-8'))
         self.witnessesList.append(witness)
 
     def addHashTransactionList(self, hashTransaction, inputCount):
@@ -61,10 +61,10 @@ class InputDataFrame():
         self.witnessesList[index] = witnesses
 
     def addAddress(self, address):
-        self.addressList.append(address)
+        self.addressList.append(address.decode('utf-8'))
 
     def updateAddress(self, address, index):
-        self.addressList[index] = address
+        self.addressList[index] = address.decode('utf-8')
 
     def notExistAddress(self, index):
         if self.addressList[index] == b'':
@@ -84,6 +84,9 @@ class InputDataFrame():
         fileName = "input_{}.csv".format(blockNumber)
         self.input.to_csv(saveDir+fileName, index=False)
 
+    def writeToPickle(fileName, saveDir="./pickle/"):
+        self.makeDir(saveDir)
+        self.input.to_pickle(saveDir+fileName)
 
     def makeDir(self, path):
         if not os.path.isdir(path):

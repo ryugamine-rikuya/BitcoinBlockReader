@@ -37,7 +37,7 @@ class TransactionDataFrame():
     def addList(self, blockHeight, blocFilekNumber, hashTransaction, lockTime, version, inputCount, outputCount, totalInputValue, totalOutputValue, fee, rawTx):
         self.blockHeightList.append(blockHeight)
         self.blockFileNumberList.append(blocFilekNumber)
-        self.hashTransactionList.append(hashTransaction)
+        self.hashTransactionList.append(hashTransaction.decode('utf-8'))
         self.lockTimeList.append(lockTime)
         self.versionList.append(version)
         self.inputCountList.append(inputCount)
@@ -66,6 +66,9 @@ class TransactionDataFrame():
         fileName = "transaction_{}.csv".format(blockHeight)
         self.transaction.to_csv(saveDir+fileName, index=False)
 
+    def writeToPickle(fileName, saveDir="./pickle/"):
+        self.makeDir(saveDir)
+        self.transaction.to_pickle(saveDir+fileName)
 
     def makeDir(self, path):
         if not os.path.isdir(path):

@@ -34,7 +34,7 @@ class OutputDataFrame():
         self.valueList.append(value)
         self.scriptLengthList.append(scriptLength)
         self.scriptSignatureRawList.append(scriptSignatureRaw)
-        self.addressList.append(address)
+        self.addressList.append(address.decode('utf-8'))
 
     def addHashTransactionList(self, hashTransaction, outputCount):
         for i in range(outputCount):
@@ -52,6 +52,9 @@ class OutputDataFrame():
         fileName = "output_{}.csv".format(blockNumber)
         self.output.to_csv(saveDir+fileName, index=False)
 
+    def writeToPickle(fileName, saveDir="./pickle/"):
+        self.makeDir(saveDir)
+        self.output.to_pickle(saveDir+fileName)
 
     def makeDir(self, path):
         if not os.path.isdir(path):

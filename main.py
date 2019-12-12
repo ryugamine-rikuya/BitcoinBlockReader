@@ -53,8 +53,8 @@ def blockParse(blockFilePath):
   if blockFilePath == "./blocks/blk00000.dat":
     return 0
   blockParser = BlockParser(
-    saveBlockFlag       = True,
-    saveSqlAsSqliteFlag = True)
+    saveBlockFlag    = True,
+    saveSqlAsCsvFlag = True)
   blockParser.setBlockFileName(blockFilePath)
   blockParser.openBlockFile()
   blockParser.startBlockFileParse()

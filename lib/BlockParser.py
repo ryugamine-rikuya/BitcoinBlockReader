@@ -126,14 +126,14 @@ class BlockParser():
     if self.saveSqlAsCsvFlag or self.saveSqlAsSqliteFlag or self.saveSqlAsMysqlFlag:
         self.sqlDf.mergeListWithDf()
         if self.saveSqlAsCsvFlag:
-          self.sqlDf.writeToCsv(self.blockHeight, self.SAVE_SQL_CSV_DIR_PATH.format(self.blockFileNumber))
+          self.sqlDf.writeToPickle(str(self.blockFileNumber)+".pickle")
         if self.saveSqlAsSqliteFlag:
           self.sqlDf.writeToSqlite(self.SAVE_SQL_SQLITE_DIR_PATH.format(str(self.blockFileNumber)+".db"))
         if self.saveSqlAsMysqlFlag:
           self.sqlDf.writeToMysql()
         self.sqlDf.initDf()
     if self.saveBlockFlag:
-      self.blockDf.writeToCsv(self.blockFileNumber, self.SAVE_BLOCK_CSV_DIR_PATH)
+      self.blockDf.writeToPickle(str(self.blockFileNumber)+".pickle")
       self.blockDf.initDf()
     self.logger.info("finish startBlockFileParse  file name is "+str(self.blockFilename))
 
@@ -368,7 +368,7 @@ class BlockParser():
       result = b""
       multisigHeaderList = (b"0014", b"0020", b"5121", b"5221")
       if pub == b"":  # NOTE　bech32はpublickeyがscriptsigの箇所にないためb""になる.
-        return ""
+        return b""
       else:
         publicKeyHash = self.hash160(pub)
         # NOTE マルチシグの3から始まるアドレス処理
@@ -391,7 +391,7 @@ class BlockParser():
       pub = pub[2:-2]
       publicKeyHash = self.hash160(pub)
       return self.convertToAddress(publicKeyHash, b'\x00')
-    return ""
+    return b""
 
   
   def stringLittleEndianToBigEndian(self, string):

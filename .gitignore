@@ -6,3 +6,6 @@ blocks.tar.gz
 
 *.csv
 *.db
+*.pkl
+*.pickle
+*.log

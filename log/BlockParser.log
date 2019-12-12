@@ -14,3 +14,123 @@
 2019-12-12 09:57:23,952 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
 2019-12-12 09:57:23,952 - BlockParser - INFO - open ./blocks/blk01184.dat file
 2019-12-12 09:57:23,953 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-12 20:06:46,248 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-12 20:06:46,248 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-12 20:06:46,249 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-12 20:06:46,249 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-12 20:07:01,291 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-12 20:07:01,291 - BlockParser - INFO - open ./blocks/blk00100.dat file
+2019-12-12 20:07:01,291 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-12 20:07:01,292 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-12 20:07:01,292 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-12 20:07:01,292 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-12 20:07:54,512 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-12 20:07:57,380 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-12 20:07:59,737 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-12 20:08:02,699 - BlockParser - INFO - finish startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-12 20:08:02,700 - BlockParser - INFO - close ./blocks/blk01184.dat file
+2019-12-12 20:08:06,147 - BlockParser - INFO - finish startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-12 20:08:06,147 - BlockParser - INFO - close ./blocks/blk01000.dat file
+2019-12-12 20:08:08,072 - BlockParser - INFO - finish startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-12 20:08:08,073 - BlockParser - INFO - close ./blocks/blk00100.dat file
+2019-12-13 00:51:50,429 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-13 00:51:50,429 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-13 00:51:50,429 - BlockParser - INFO - open ./blocks/blk00100.dat file
+2019-12-13 00:51:50,431 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 00:51:50,431 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 00:51:50,432 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 00:52:30,768 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-13 00:53:58,304 - BlockParser - INFO - open ./blocks/blk00100.dat file
+2019-12-13 00:53:58,304 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-13 00:53:58,304 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-13 00:53:58,305 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 00:53:58,305 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 00:53:58,305 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 00:54:37,681 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-13 00:54:39,837 - BlockParser - INFO - finish startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 00:54:39,837 - BlockParser - INFO - close ./blocks/blk01184.dat file
+2019-12-13 00:54:40,357 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-13 00:54:42,570 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-13 00:54:42,668 - BlockParser - INFO - finish startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 00:54:42,668 - BlockParser - INFO - close ./blocks/blk01000.dat file
+2019-12-13 00:54:44,950 - BlockParser - INFO - finish startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 00:54:44,951 - BlockParser - INFO - close ./blocks/blk00100.dat file
+2019-12-13 00:56:44,350 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-13 00:56:44,350 - BlockParser - INFO - open ./blocks/blk00100.dat file
+2019-12-13 00:56:44,351 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-13 00:56:44,351 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 00:56:44,351 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 00:56:44,351 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 00:57:24,013 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-13 00:57:26,160 - BlockParser - INFO - finish startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 00:57:26,160 - BlockParser - INFO - close ./blocks/blk01184.dat file
+2019-12-13 00:57:26,616 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-13 00:57:28,463 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-13 00:57:28,940 - BlockParser - INFO - finish startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 00:57:28,940 - BlockParser - INFO - close ./blocks/blk01000.dat file
+2019-12-13 00:57:30,839 - BlockParser - INFO - finish startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 00:57:30,840 - BlockParser - INFO - close ./blocks/blk00100.dat file
+2019-12-13 01:02:39,063 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-13 01:02:39,064 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 01:02:39,065 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:02:39,066 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-13 01:02:39,066 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 01:02:39,066 - BlockParser - INFO - open ./blocks/blk00100.dat file
+2019-12-13 01:02:39,067 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 01:02:39,067 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:02:53,456 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-13 01:02:53,456 - BlockParser - INFO - open ./blocks/blk00100.dat file
+2019-12-13 01:02:53,456 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-13 01:02:53,457 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 01:02:53,457 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 01:02:53,457 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 01:02:53,458 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:02:53,458 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:05:17,865 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-13 01:05:17,865 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-13 01:05:17,865 - BlockParser - INFO - open ./blocks/blk00100.dat file
+2019-12-13 01:05:17,865 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 01:05:17,865 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 01:05:17,865 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 01:05:17,866 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:05:17,867 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:05:39,402 - BlockParser - INFO - open ./blocks/blk00100.dat file
+2019-12-13 01:05:39,402 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-13 01:05:39,402 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-13 01:05:39,402 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 01:05:39,402 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 01:05:39,402 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 01:05:39,403 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:05:39,403 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:06:12,606 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-13 01:06:12,606 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-13 01:06:12,606 - BlockParser - INFO - open ./blocks/blk00100.dat file
+2019-12-13 01:06:12,606 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 01:06:12,607 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 01:06:12,606 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 01:06:12,607 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:06:12,607 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:06:29,299 - BlockParser - INFO - open ./blocks/blk00100.dat file
+2019-12-13 01:06:29,299 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-13 01:06:29,299 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-13 01:06:29,299 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 01:06:29,299 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 01:06:29,299 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 01:06:29,300 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:06:29,300 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:06:29,300 - BlockParser - ERROR - 'str' object has no attribute 'decode'
+2019-12-13 01:07:31,234 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-13 01:07:31,234 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-13 01:07:31,234 - BlockParser - INFO - open ./blocks/blk00100.dat file
+2019-12-13 01:07:31,235 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 01:07:31,235 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 01:07:31,235 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 01:08:12,508 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-13 01:08:15,140 - BlockParser - INFO - finish startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-13 01:08:15,141 - BlockParser - INFO - close ./blocks/blk01184.dat file
+2019-12-13 01:08:15,173 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-13 01:08:17,315 - BlockParser - ERROR - unpack requires a bytes object of length 4
+2019-12-13 01:08:18,021 - BlockParser - INFO - finish startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-13 01:08:18,021 - BlockParser - INFO - close ./blocks/blk01000.dat file
+2019-12-13 01:08:20,541 - BlockParser - INFO - finish startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-13 01:08:20,542 - BlockParser - INFO - close ./blocks/blk00100.dat file
