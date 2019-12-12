@@ -1,0 +1,16 @@
+2019-12-12 09:26:40,344 - BlockParser - INFO - open ./blocks/blk00100.dat file
+2019-12-12 09:26:40,344 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-12 09:26:40,344 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk00100.dat
+2019-12-12 09:26:40,344 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-12 09:56:41,430 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-12 09:56:41,430 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-12 09:56:41,431 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-12 09:56:41,431 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-12 09:56:55,066 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-12 09:56:55,066 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-12 09:56:55,066 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat
+2019-12-12 09:56:55,066 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-12 09:57:23,952 - BlockParser - INFO - open ./blocks/blk01000.dat file
+2019-12-12 09:57:23,952 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01000.dat
+2019-12-12 09:57:23,952 - BlockParser - INFO - open ./blocks/blk01184.dat file
+2019-12-12 09:57:23,953 - BlockParser - INFO - startBlockFileParse  file name is ./blocks/blk01184.dat

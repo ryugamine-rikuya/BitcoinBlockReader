@@ -17,6 +17,8 @@ import glob
 import configparser
 from multiprocessing import Pool
 from multiprocessing import Process
+import logging
+from logging import getLogger, StreamHandler, Formatter, FileHandler
 
 from lib.SQL         import SqlDataFrame
 from lib.Block       import BlockDataFrame
@@ -64,6 +66,7 @@ class BlockParser():
 
     cfg = configparser.ConfigParser()
     cfg.read("./lib/config/development.conf")
+    self.APP_NAME                      = cfg["section1"]["APP_NAME"]
     self.SAVE_SQL_CSV_DIR_PATH         = cfg["section1"]["SAVE_SQL_CSV_DIR_PATH"]
     self.SAVE_SQL_SQLITE_DIR_PATH      = cfg["section1"]["SAVE_SQL_SQLITE_DIR_PATH"]
     self.SAVE_BLOCK_CSV_DIR_PATH       = cfg["section1"]["SAVE_BLOCK_CSV_DIR_PATH"]
@@ -71,19 +74,40 @@ class BlockParser():
     self.SAVE_OUTPUT_CSV_DIR_PATH      = cfg["section1"]["SAVE_OUTPUT_CSV_DIR_PATH"]
     self.SAVE_TRANSACTION_CSV_DIR_PATH = cfg["section1"]["SAVE_TRANSACTION_CSV_DIR_PATH"]
     self.COINBASE_PREVIOUST_HASH       = b'0000000000000000000000000000000000000000000000000000000000000000'
+    self.logger          = self.loggingSetting()
+    
+    
   
+  def loggingSetting(self):
+    logLevel = logging.DEBUG
+    logger = getLogger(self.APP_NAME)
+    logger.setLevel(logLevel)
+    handler_format = Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    stream_handler = StreamHandler()
+    stream_handler.setLevel(logLevel)
+    stream_handler.setFormatter(handler_format)
+    logger.addHandler(stream_handler)
+    file_handler = FileHandler("{}{}.log".format("./log/" , self.APP_NAME))
+    file_handler.setLevel(logLevel)
+    file_handler.setFormatter(handler_format)
+    logger.addHandler(file_handler)
+    return logger
+    
+
+
   def setBlockFileName(self, blockFilename=None):
     self.blockFilename = blockFilename
     if self.blockFilename:
       self.blockFileNumber = int(self.blockFilename.split("/")[-1].split(".")[0].split("blk")[1])
   
   def startBlockFileParse(self):
+    self.logger.info("startBlockFileParse  file name is "+str(self.blockFilename))
     while True:
       try:
-        print("block file number : ",self.blockFileNumber," ,block Height : ", self.blockHeight)
+        #self.logger.info("block file number : ",self.blockFileNumber," ,block Height : ", self.blockHeight)
         self.readBlock()
       except Exception as e:
-        print(e)
+        self.logger.error(e)
         break
       else:
         if self.saveInputFlag:
@@ -111,15 +135,18 @@ class BlockParser():
     if self.saveBlockFlag:
       self.blockDf.writeToCsv(self.blockFileNumber, self.SAVE_BLOCK_CSV_DIR_PATH)
       self.blockDf.initDf()
+    self.logger.info("finish startBlockFileParse  file name is "+str(self.blockFilename))
 
   def openBlockFile(self):
+    self.logger.info("open "+str(self.blockFilename)+" file")
     if self.blockFilename:
       try:
         self.blockFile = open(self.blockFilename, "rb")
       except Exception as e:
-        print(e)
+        self.logger.error(e)
       
   def closeBlockFile(self):
+    self.logger.info("close "+str(self.blockFilename)+" file")
     self.blockFile.close()
 
   def readBlock(self):
@@ -135,15 +162,6 @@ class BlockParser():
     countOfTransactions   = self.readVarInt()
     rawTx                 = ""  # NOTE トランザクションを全て保存すると容量がとんでもないことになるため, ""を代入. 容量気にしない場合は利用する. 利用の仕方は実装したい人に任せます.
     self.readTransactions(countOfTransactions, creationTimeTimestamp)
-    if self.readBlockFlag:
-      print("!!")
-      print("magicNumber:",magicNumber,"blockSize:",blockSize)
-      print("blockSize:",blockSize)
-      print("version:",version)
-      print("magicNumber:",magicNumber)
-      print("magicNumber:",magicNumber)
-      print("magicNumber:",magicNumber)
-      print("magicNumber:",magicNumber)
     if self.saveBlockFlag:
       self.blockDf.addLine(self.blockHeight, self.blockFileNumber, magicNumber, blockSize, version, previousHash, merkleHash, creationTimeTimestamp, creationTime, bits, nonce, countOfTransactions)
     
@@ -293,7 +311,7 @@ class BlockParser():
     if extendedFormat and cutStart1 != 0 and cutEnd1 != 0 and cutStart2 != 0 and cutEnd2 != 0:
       dataToHashForTransactionId = dataToHashForTransactionId[:(cutStart1 - beginByte)] + dataToHashForTransactionId[(cutEnd1 - beginByte):(cutStart2 - beginByte)] + dataToHashForTransactionId[(cutEnd2 - beginByte):]
     elif extendedFormat:
-      print(cutStart1, cutEnd1, cutStart2, cutEnd2)
+      self.logger.info(cutStart1, cutEnd1, cutStart2, cutEnd2)
       quit()
     hashTransaction  = self.calcHashTransaction(dataToHashForTransactionId)
 
@@ -323,7 +341,7 @@ class BlockParser():
       if intValue >= 1 and intValue <= 75:
         return True
     except Exception as e:
-      print(e)
+      self.logger.info(e)
       pass
     return False
   
